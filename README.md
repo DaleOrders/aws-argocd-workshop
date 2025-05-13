@@ -1,4 +1,6 @@
-Instructions for workshop setup:
+# AWS Programming and Tools Workshop (ArgoCD Workshop) 
+
+## Instructions for workshop setup:
 
 1. Sign into your AWS account 
 2. Click https://ap-southeast-1.console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/quickcreate?templateUrl=https://ws-assets-prod-iad-r-sin-694a125e41645312.s3.ap-southeast-1.amazonaws.com/39146514-f6d5-41cb-86ef-359f9d2f7265/eks-workshop-vscode-cfn.yaml&stackName=eks-workshop-ide&param_RepositoryRef=stable
@@ -44,9 +46,11 @@ Instructions for workshop setup:
 
 11. Run the following code:
 
-`export EKS_CLUSTER_NAME=eks-workshop
+```
+export EKS_CLUSTER_NAME=eks-workshop
 curl -fsSL https://raw.githubusercontent.com/aws-samples/eks-workshop-v2/stable/cluster/eksctl/cluster.yaml | \
-envsubst | eksctl create cluster -f -`
+envsubst | eksctl create cluster -f -
+```
 
 <img width="1724" alt="image" src="https://github.com/user-attachments/assets/b1a4dd08-afd2-44d3-96a9-38a0f0b200e3" />
 
@@ -54,7 +58,9 @@ envsubst | eksctl create cluster -f -`
     
 14. Once finished, run the following command:
 
-`prepare-environment automation/gitops/argocd`
+```
+prepare-environment automation/gitops/argocd
+```
 
 <img width="1402" alt="image" src="https://github.com/user-attachments/assets/f423c2b4-aea5-46d3-9c06-7b18750c6821" />
 
@@ -63,14 +69,18 @@ envsubst | eksctl create cluster -f -`
 
 https://www.eksworkshop.com/docs/automation/gitops/argocd/codecommit
 
-Instructions for workshop cleanup:
+## Instructions for workshop cleanup:
 
 1. Run the following command in your environment to delete your cluster:
 
-`delete-environment`
-`eksctl delete cluster $EKS_CLUSTER_NAME --wait`
+```
+delete-environment
+eksctl delete cluster $EKS_CLUSTER_NAME --wait
+```
 
 2. In your cloudshell run the following command to delete your stack:
 
-`aws cloudformation delete-stack --stack-name eks-workshop-ide`
+```
+aws cloudformation delete-stack --stack-name eks-workshop-ide
+```
 
