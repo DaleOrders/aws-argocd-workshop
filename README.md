@@ -56,12 +56,19 @@ envsubst | eksctl create cluster -f -`
 
 `prepare-environment automation/gitops/argocd`
 
+<img width="1402" alt="image" src="https://github.com/user-attachments/assets/f423c2b4-aea5-46d3-9c06-7b18750c6821" />
+
+
+15: Access the workshop at:
+
+https://www.eksworkshop.com/docs/automation/gitops/argocd/codecommit
+
 Instructions for workshop cleanup:
 
 1. Run the following command in your environment to delete your cluster:
 
-`delete-environment
-eksctl delete cluster $EKS_CLUSTER_NAME --wait`
+`delete-environment`
+`eksctl delete cluster $EKS_CLUSTER_NAME --wait`
 
 2. In your cloudshell run the following command to delete your stack:
 
