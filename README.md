@@ -1,9 +1,16 @@
 # AWS Programming and Tools Workshop (ArgoCD Workshop) 
 
-## Instructions for workshop setup:
+## 📚 Table of Contents
+
+- [Instructions for Workshop Setup](#instructions-for-workshop-setup)
+- [Reset Cluster](#reset-cluster)
+- [Instructions for Workshop Cleanup](#instructions-for-workshop-cleanup)
+
+
+## Instructions for workshop setup
 
 1. Sign into your AWS account 
-2. Click https://ap-southeast-1.console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/quickcreate?templateUrl=https://ws-assets-prod-iad-r-sin-694a125e41645312.s3.ap-southeast-1.amazonaws.com/39146514-f6d5-41cb-86ef-359f9d2f7265/eks-workshop-vscode-cfn.yaml&stackName=eks-workshop-ide&param_RepositoryRef=stable
+2. This workshop will be run in ap-southeast-1. Click https://ap-southeast-1.console.aws.amazon.com/cloudformation/home?region=ap-southeast-1#/stacks/quickcreate?templateUrl=https://ws-assets-prod-iad-r-sin-694a125e41645312.s3.ap-southeast-1.amazonaws.com/39146514-f6d5-41cb-86ef-359f9d2f7265/eks-workshop-vscode-cfn.yaml&stackName=eks-workshop-ide&param_RepositoryRef=stable
 
 
 3. Scroll to the bottom of the screen and click "I acknowledge that AWS CloudFormation might create IAM resources with customised names." Click "create stack" button.
@@ -69,7 +76,23 @@ prepare-environment automation/gitops/argocd
 
 https://www.eksworkshop.com/docs/automation/gitops/argocd/codecommit
 
-## Instructions for workshop cleanup:
+## Reset Cluster 
+
+If you wish to re-start the workshop or do a different workshop on https://www.eksworkshop.com run the prepare-environment command again.
+
+For example, to re-start the argocd workshop run:
+
+```
+prepare-environment automation/gitops/argocd
+```
+
+To start a new workshop, run the prepare-environment command that can be found on the eksworkshop. For example, if you wish to do the EBS workshop on https://www.eksworkshop.com/docs/fundamentals/storage/ebs/, you would run
+
+```
+prepare-environment fundamentals/storage/ebs
+```
+
+## Instructions for workshop cleanup
 
 1. Run the following command in your environment to delete your cluster:
 
